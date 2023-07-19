@@ -15,3 +15,5 @@ git remote add origin https://github.com/hoangthien12345/LearnGit
 git clone <đường dẫn>
 
 // lần thứ 2 thì dùng git pull
+
+git pull origin master
