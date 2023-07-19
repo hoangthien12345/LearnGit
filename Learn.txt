@@ -23,7 +23,7 @@ git clone <đường dẫn>
 
 // lần thứ 2 thì dùng git pull
 
-git pull origin master
+git pull origin <tên branch>
 
 // ==========================================
 // học branch
@@ -91,3 +91,16 @@ git reset <--soft HEAD~1>  // quay trở lại -1 nhưng không xóa commit hi�
  git checkout <lấy mã ID trong git log --oneline> -b <ten branch muốn tạo>
  * Bài toán 5: xóa branch remote
  git push origin -d <tên branch>  
+
+
+ // =============================== PHẦN 3 ===================================
+Làm nhóm nhiều người
+- tạo merge request
+
+- git stash: lưu vào vùng nhớ riêng
+- git stash list
+- git stash pop: 
+
+// =========================== quay trở lại commit nhưng không xóa commit hiện tại khác với git reset --hard
+git revertxư <chỉ số muốn lưu>
+git reset --hard <mã số>
