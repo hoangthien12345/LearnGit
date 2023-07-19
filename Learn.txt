@@ -1,4 +1,5 @@
-git config --global user.name "hoangthien12345"
+// cấu hình
+it config --global user.name "hoangthien12345"
 git config --global user.email "a11718thien@gmail.com"
 
 // kết nối tới repo
@@ -33,3 +34,60 @@ git checkout -b <ten branch>
 
 // them 
 git merge <ten branch>
+
+//==================================== PHẦN 2 ===============================
+
+Các branch quan trọng khi sử dụng git
+-  Các branch chính:
++ branch master: chỉ dùng để theo dõi và đánh tag
++ branch develop: phát triển cho phiên bản hiện tại
++ branch Release: được tạo ra khi merge nhánh develop và master
+
+- Các branch riêng:
++ branch feature: phát triển tính năng mới
++ branch bugfix: fix các bug phát sinh trong quá trình dev 
++ branch hotfix: fix các bug quan trọng
+
+Nhánh develop tạo ra nhánh feature, merge vào develop
+
+ bug <---   develop    <----------      Master 
+             |
+             |
+            \/
+          Feature(merge vào develop) 
+
+// Đánh tag : git tag
+git tag <ten version>
+
+push tag lên remote: git push origin <ten version>
+
+// ====================================================================================
+
+* Bài toán 1: Chỉnh sửa commit cuối cùng
+// ghi đè lên commit cuối cùng (không phát sinh thêm git graph)
+C1
+git commit --amend (hay thêm -m "<>") => :q
+
+C2:
+git reset <--hard HEAD~1> // trở về commit trừ 1 (HEAD là con trỏ hiện tại) xóa file hiện tại
+git reset <--soft HEAD~1>  // quay trở lại -1 nhưng không xóa commit hiện tại // để sửa lại tính năng
+
+* Bài toán 2: xóa commit ở local
+  dùng git reset --hard HEAD~<số lần>
+
+* Bài toán 3: tạo branch xóa branch
+ Tạo branch: git branch <ten branch>
+ Di chuyển giữa các branh: git checkout <ten branch>
+ Xóa branch: get branch -D <ten branch>
+ Lệnh gộp: get checkout -b <ten branch>
+* Bài toán 4: Xóa nội dung đã thay đổi và trở về commit gần nhất // chưa commit
+ git reset hard HEAD (git log --oneline)
+
+ * Bài toán 5: chỉnh sửa commit cuối cùng trên remote
+ git commit --amend
+ git push -f origin <branch>
+
+ * Bài toán 6: quay trở lại history và phát triển tính năng riêng
+ git checkout <lấy mã ID trong git log --oneline> -b <ten branch muốn tạo>
+ * Bài toán 5: xóa branch remote
+ git push origin -d <tên branch>  
