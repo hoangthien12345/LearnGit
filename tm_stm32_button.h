@@ -71,6 +71,7 @@ extern "C" {
  - TM DELAY
  - stdlib.h
  - THêm chức năng mới GPIO
+ - Thêm hiệu ứng led
 \endverbatim
  */
 
