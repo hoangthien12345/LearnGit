@@ -23,3 +23,13 @@ git clone <đường dẫn>
 // lần thứ 2 thì dùng git pull
 
 git pull origin master
+
+// ==========================================
+// học branch
+tạo branch : git branch <ten branch>
+xóa branch : git branch -D <ten branch>
+
+git checkout -b <ten branch>
+
+// them 
+git merge <ten branch>
