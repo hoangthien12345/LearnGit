@@ -4,13 +4,19 @@ git config --global user.email "a11718thien@gmail.com"
 // kết nối tới repo
 git remote add origin https://github.com/hoangthien12345/LearnGit
 
+// =========================================
+// đoạn này là thêm code vào staging area
 // git add . : add vào staging area (index)
 
+// đưa code vào commit
 // git commit (sử dụng để add từ index sang local repo)
 
+// pusl code lên global
 // git push: push local lên remote
    git push origin master
 
+// =======================================
+// đoạn này là lấy code về 
 // git clone chỉ dùng lần đầu khi clone code về
 git clone <đường dẫn>
 
