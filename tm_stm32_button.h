@@ -70,6 +70,7 @@ extern "C" {
  - TM GPIO
  - TM DELAY
  - stdlib.h
+ - THêm chức năng mới GPIO
 \endverbatim
  */
 

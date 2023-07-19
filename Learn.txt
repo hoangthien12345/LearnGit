@@ -1,0 +1,12 @@
+git config --global user.name "hoangthien12345"
+git config --global user.email "a11718thien@gmail.com"
+
+// kết nối tới repo
+git remote add origin https://github.com/hoangthien12345/LearnGit
+
+// git add . : add vào staging area (index)
+
+// git commit (sử dụng để add từ index sang local repo)
+
+// git push: push local lên remote
+   git push origin master
